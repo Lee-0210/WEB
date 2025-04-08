@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        .box:hover {
+            transition: 2s ease-in-out;
+            transform: rotate(360deg);
+        }
+
+        .box {
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border: 1px solid black;
+        }
+        .box + .box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>박스 모델</h1>
+
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>
