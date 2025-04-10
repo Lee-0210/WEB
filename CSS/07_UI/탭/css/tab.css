@@ -1,0 +1,56 @@
+.container {
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid orange;
+}
+
+.tab_box {
+  width: 600px;
+  margin: 50px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* 라디오 버튼 숨김 */
+[type="radio"] {display: none;}
+
+/* 탭 버튼(label) */
+.tab_item {
+  width: calc(100%/3);
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  background-color: #f8f8f8;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* 선택한 탭 버튼 효과 */
+.tab_box input:checked + label,
+.tab_item:hover {
+  background-color: #333;
+  color: white;
+}
+
+img {width: 100%;}
+
+/* 탭 내용 */
+.tab_content {
+  display: none;
+  padding: 40px;
+  text-align: center;
+  overflow: hidden;
+  clear: both;
+}
+
+/*
+  tab1 (label 1번) 선택
+  -> 연결된 radio 버튼 선택 (:checkd)
+  -> 형제요소인 1번 내용을 출력
+*/
+#tab1:checked ~ #tab_content1,
+#tab2:checked ~ #tab_content2,
+#tab3:checked ~ #tab_content3 {
+  display: inherit;
+}
