@@ -45,7 +45,7 @@ header {
   transition: all 0.3s;
 }
 #nav .gnb li:hover a span {
-  animation: slideUp 0.5s ease forwards, toTop 0.5s 0.5s ease forwards;
+  animation: slideUp 0.5s ease forwards, toTop 0.2s 0.5s ease forwards;
 }
 
 @keyframes slideUp {

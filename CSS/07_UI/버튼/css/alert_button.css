@@ -6,6 +6,8 @@
 }
 
 .btn {
+  display: inline-block;
+  font-size: 14px;
   border: none;
   padding: 14px 28px;
   cursor: pointer;

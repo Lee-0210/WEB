@@ -1,0 +1,149 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+a {text-decoration: none; color: black;}
+ul {list-style: none;}
+
+/* 헤더 */
+header {
+  width: 100%;
+  border: 1px solid black;
+  position: fixed;
+  top: 0;
+}
+
+/* 유틸 */
+.util {
+  height: 40px;
+  padding: 10px;
+  background-color: #dce6ff;
+}
+
+/* 유틸 > 유틸메뉴 */
+.util .util-menu {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 14px;
+}
+.util .util-menu li {
+
+}
+
+/* 메뉴 */
+.menu {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 메뉴 > 유저 */
+.menu {}
+.menu .side a, .menu .user a {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: #668ef6;
+  color: white;
+  font-size: 30px;
+}
+
+/* 메뉴 > 메인메뉴 */
+.menu .main-menu {}
+.menu .main-menu nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+.menu .main-menu ul li{
+  height: 80px;
+  line-height: 80px;
+}
+.menu .main-menu ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0 80px;
+  font-weight: bold;
+}
+.menu .main-menu ul li a:hover {
+  background-color: #668ef6;
+  color: white;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 330px;
+  height: calc(100vh - 120px);
+  position: fixed;
+  top: 120px;
+  right: -330px;
+  box-shadow: -2px 2px 5px rgba(0,0,0,0.6);
+  transition: right 0.5s;
+}
+/* 사이드바 활성화 */
+#bars:checked ~ .sidebar {right: 0;}
+.sidebar .sidemenu li {
+  border-bottom: 1px solid black;
+}
+.sidebar .sidemenu li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.sidebar .sidemenu li  a:hover {
+  background-color: royalblue;
+  color: white;
+  transform: scale(1.1);
+}
+.sidebar .sidemenu li h3 {
+  font-size: 20px;
+}
+.sidebar .sidemenu li p {
+  font-size: 12px;
+}
+
+/* 메뉴 아이콘 */
+.bars {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+}
+.bar {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.4s;
+  opacity: 1;
+}
+.bar.top { top: 0; left: 0;}
+.bar.mid { top: 50%; left: 0; transform: translateY(-50%);}
+.bar.bottom { bottom: 0; left: 0;}
+
+/* 메뉴 체크 */
+#bars:checked ~ header .bars .top {
+  transform: rotate(45deg) translate(3px, -1px);
+  transform-origin: top left;
+}
+#bars:checked ~ header .bars .mid {
+  opacity: 0;
+  transition: all 0.4s;
+}
+#bars:checked ~ header .bars .bottom {
+  transform: rotate(-45deg) translate(-1px, 2px);
+  transform-origin: top left;
+}
+#bars:checked ~ header .bars {
+  left: 4px;
+}
