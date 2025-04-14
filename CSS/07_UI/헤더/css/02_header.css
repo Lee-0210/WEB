@@ -1,0 +1,129 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style-type: none;}
+a {color: #ddd; text-decoration: none;}
+body {background-color: #ddd;}
+/* 헤더 */
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 90px;
+  background-color: black;
+  width: 100%;
+}
+.logo {
+  padding: 0 20px;
+}
+
+/* 네비 */
+#nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#nav .gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+#nav .gnb li {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  overflow: hidden;
+}
+#nav .gnb li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 40px;
+  transition: all 0.3s;
+}
+#nav .gnb li:hover a span {
+  animation: slideUp 0.5s ease forwards, toTop 0.5s 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-200%);}
+}
+@keyframes toTop {
+  0% {transform: translateY(200%);}
+  100% {transform: translateY(0);}
+}
+
+
+
+
+
+/* #nav .gnb li a:hover span {
+  display: block;
+  position: relative;
+  animation: ani 0.3s;
+}
+#nav .gnb li a > span {transition: 0.3s;}
+@keyframes ani {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+} */
+
+/* 유틸 */
+.util {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.util div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.util .langs a {
+  opacity: 0.5;
+}
+.util .langs a.active {
+  opacity: 1;
+}
+.util .sns {
+  position: relative;
+  top: 3px;
+}
+.util .sns img {
+  height: 20px;
+  opacity: 0.7;
+}
+.util .sitemap {
+  position: relative;
+  top: 3px;
+}
+.line {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+/* 마우스 */
+.cursor {
+  display: none;
+  position: fixed;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 5px solid white;
+  z-index: 99;
+  transition: 0.1s linear;
+  /* 요소와 배경의 혼합 방식을 지정하는 속성 */
+  mix-blend-mode: difference;
+  /* 마우스 이벤트 무시 */
+  pointer-events: none;
+}

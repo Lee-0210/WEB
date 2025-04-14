@@ -1,0 +1,102 @@
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 110px;
+  padding: 0 64px;
+  transition: all 0.3s;
+}
+
+/* 로고 */
+.logo-area img {
+  display: block;
+  width: 160px;
+  height: auto;
+}
+
+/* 메뉴 */
+#header-nav {
+  display: block;
+  height: 100%;
+}
+.gnb {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: inherit;
+  font-size: 18px;
+}
+.gnb > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gnb > li > a {
+  display: block;
+  min-width: clamp(60px, 10vw, 300px);
+  color: white;
+}
+
+/* 유틸 */
+.util {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+}
+.util a {
+  color: white;
+}
+.family a {
+  display: inline-block;
+  padding: 4px 6px;
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 20px;
+}
+.langs {display: flex; justify-content: center; column-gap: 20px;}
+.langs a {opacity: 0.4; position: relative;}
+.langs a.active {opacity: 1;}
+.langs a:first-of-type::after {
+  content: "";
+  height: 12px;
+  border: 1px solid white;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  opacity: 0.4;
+}
+
+/* 섹션 */
+section { height: 100vh;}
+section > img {
+  width:100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.sitemap a span {
+  position: relative;
+  top: 3px;
+}
+
+/* 마우스 호버 효과 */
+header:hover {
+  background-color: white;
+}
+header:hover a {
+  color: black;
+}
+header:hover .langs a:first-of-type::after {
+  border-color: black;
+}
+
