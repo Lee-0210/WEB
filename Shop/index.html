@@ -309,9 +309,38 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
    </footer>
+   <script>
+      // 특가 타이머 함수
+      function timer() {
+        // 현재 날자 시간
+        const now = new Date()
+
+        // 내일 자정 (00:00:00)
+        const tomorrow = new Date()
+        tomorrow.setHours(24, 0, 0, 0)  // 오늘 24:00:00 == 내일 00:00:00
+
+        // 시간 차
+        const diff = tomorrow -  now
+        const time = Math.floor(diff / 1000)  // 소수점 단위 제거
+        let hours =  Math.floor( time / (60 * 60))
+        let mins =  Math.floor((time % (60 * 60)) / 60)
+        let secs = time % 60
+
+        hours = String(hours).padStart(2, '0')
+        mins = String(mins).padStart(2, '0')
+        secs = String(secs).padStart(2, '0')
+
+        const T = `${hours} : ${mins} : ${secs}`
+
+        // id = "spectial-timer"
+        let $timer = document.getElementById('special-timer')
+        $timer.textContent = T
+      }
+
+      setInterval(timer, 1000)
+   </script>
 </body>
 </html>
