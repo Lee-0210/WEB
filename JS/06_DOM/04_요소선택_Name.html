@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소선택Name</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const inputs = document.getElementsByName("input")
+      const input = inputs[0]
+
+      // 키 입력 이벤트
+      // - 키 입력시, h1 태그에 입력값 출력
+      input.addEventListener("keypress", (e) => {
+        const $text = document.getElementById("text")
+        $text.textContent = input.value
+      })
+    })
+  </script>
+</head>
+<body>
+  <h1 id="text">입력해보세요!</h1>
+  <textarea name="input" rows="5" cols="40" placeholder="입력해보세요!"></textarea>
+</body>
+</html>

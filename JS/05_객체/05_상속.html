@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>클래스</title>
         <script>
+            class Object {
+
+            }
             // 클래스 선언
             class Car {
                 // 생성자
@@ -19,7 +22,7 @@
                 }
             }
             Car.prototype.option = '옵션A'
-            
+
             // 상속
             class SuperCar extends Car {
                 constructor(name, price, speed) {
@@ -37,7 +40,7 @@
             let superCar = new SuperCar('슈퍼카', 30000, 400)
             document.write( superCar.showInfo() )
 
-            
+
         </script>
     </head>
     <body>
