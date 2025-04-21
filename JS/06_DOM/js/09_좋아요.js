@@ -32,6 +32,6 @@ function heartAlert() {
     imageUrl: "./img/heart.gif",
     imageWidth: 200,
     showConfirmButton: false,
-    timer: 1000
+    timer: 2000
   });
 }

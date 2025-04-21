@@ -1,12 +1,13 @@
 .container {
   width: 1200px;
+  overflow: hidden;
 }
 .slide {
+  position: relative;
   width: 100%;
   display: flex;
-  overflow: hidden;
+  transition: all 1s ease;
 }
 .slide img {
   width: 100%;
-  transition: transform 1s ease;
 }
