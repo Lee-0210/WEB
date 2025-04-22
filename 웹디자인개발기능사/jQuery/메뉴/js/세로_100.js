@@ -19,4 +19,27 @@ document.addEventListener("DOMContentLoaded", () => {
   sub.addEventListener('mouseout', () => {
     sub.classList.remove('active')
   })
+  document.querySelector(".test").addEventListener('click', () => {
+    alert("클릭")
+  })
 })
+
+// $(() => {
+//   const menu = $('.menu')
+//   const sub = $('.sub')
+
+//   menu.on('mouseover', function() {
+//     sub.stop().fadeIn()
+//   }).on('mouseout', function() {
+//     sub.stop().fadeOut()
+//   })
+
+//   menu.hover(
+//     function() {
+//       sub.stop().fadeIn()
+//     },
+//     function() {
+//       sub.stop().fadeOut()
+//     }
+//   )
+// })

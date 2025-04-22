@@ -8,12 +8,10 @@ a {text-decoration: none; color: black;}
   border: 3px solid orange;
 }
 header {
-  width: 200px;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  row-gap: 50px;
+  gap: 100px;
   padding: 0 20px;
 }
 .main-menu {
@@ -34,28 +32,34 @@ header {
 .menu-item:hover > a {color: white;}
 
 .menu {position: relative;}
+
 .sub {
   position: absolute;
   top: 0;
   left: 100%;
-  width: calc(1200px - 165px);
-}
-
-.sub .inner {
-  width: clac( 1200px - 165px);
   width: 100%;
-  display: none;
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
   background-color: lightgray;
   padding: 0 40px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
 }
 
-.sub.active .inner {
-  display: flex;
+.sub.active  {
+  visibility: visible;
+  opacity: 1;
 }
 
 .sub .sub-menu {
   display: flex;
+}
+
+.test {
+  width: 200px;
+  height: 100px;
+  font-size: 50px;
 }
