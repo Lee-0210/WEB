@@ -1,0 +1,26 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top; max-width: 100%;}
+button {cursor: pointer;}
+body {background-color: #fff; color: #333;}
+
+.wrap {width: 100%; height: 670px; display: flex;}
+header {width: 100px; background-color: #f45750;}
+nav {text-align: center;}
+nav > ul > li {position: relative;}
+nav > ul > li:hover > a {background-color: royalblue;}
+nav a {display: inline-block; width: 100%; height: 100%; padding: 5px; transition: all 0.3s;}
+nav a:hover {background-color: aquamarine;}
+nav .sub {width: 100px; max-height: 0; overflow: hidden; position: absolute; top: 0; left: 100%; background-color: #f45750; opacity: 0; visibility: hidden; transition: all 0.5s; z-index: 10;}
+nav .sub.active {opacity: 1; visibility: visible; overflow: visible; max-height: 150px;}
+
+.contents {width: 800px;}
+.slide {width: 100%; height: 350px; border: 1px solid black; overflow: hidden;}
+.slide .image {width: 2400px; height: 350px; display: flex; overflow: hidden; transition: all 0.5s;}
+.slide .image img {width: 100%;}
+
+.con {height: 200px; background-color: #ff884d; display: grid; grid-template-columns: 0.35fr 0.35fr 0.3fr;}
+.con .gall {background-color: black;}
+footer {height: 120px; background-color: #666;}
