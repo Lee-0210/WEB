@@ -1,0 +1,64 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {color: inherit; text-decoration: none; display: block;}
+.container {width: 1200px; margin: auto;}
+header {width: 100%; height: 100px; background-color: antiquewhite; position: relative;}
+nav {z-index: 99; position: absolute; right: 50px; top: 50px;}
+nav > ul {display: flex;}
+nav > ul > li {text-align: center;}
+nav > ul > li:hover {background-color: gray;}
+nav > ul > li > a {border: 1px solid black; display: block; padding: 7px 30px;}
+.sub {background-color: #fff; display: none;}
+.sub li:hover {background-color: gray;}
+.sub li {padding: 5px 0;}
+
+section {overflow: hidden; height: 300px}
+.slide {width: 100%; height: 300%; display: flex; flex-direction: column; transition: all 0.3s;}
+.img1 {background: url(/모코코짤1.jpg) no-repeat center/cover; width: 100%; height: 100%;}
+.img2 {background: url(/모코코짤2.jpg) no-repeat center/cover; width: 100%; height: 100%;}
+.img3 {background: url(/모코코짤3.jpg) no-repeat center/cover; width: 100%; height: 100%;}
+.contents {
+    height: 200px;
+    display: flex;
+}
+.con {width: calc(100% / 3); display: flex; position: relative;}
+.con h2 > a {padding: 10px; width: 120px; text-align: center; background-color: cornflowerblue; border-radius: 10px 10px 0 0;}
+.con ul {display: none; position: absolute; left: 0; top: 49px; width: 100%; background-color: cornflowerblue;}
+.con ul li {border-bottom: 1px dashed #fff;}
+.con ul li:last-child {border-bottom: none;}
+.con ul li a {display: flex; justify-content: space-between; padding: 7px 10px;}
+.con h2 a {background-color: white; color: #000;}
+.con h2.on + ul {display: block;}
+.con h2.on a {background-color: cornflowerblue; color: #fff;}
+.con .gallery h2.on + ul {display: flex !important; justify-content: space-around; height: 75%; align-items: center;}
+.con .gallery ul li {border: none;}
+.con .gallery ul li a {display: flex; flex-direction: column;}
+.banner {width: calc(100% / 3); background-color: blue;}
+.go {width: calc(100% / 3); background-color: yellow;}
+
+footer {height: 100px; background-color: #333;}
+
+.popup {
+    display: none;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 400px; height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    text-align: center;
+}
+.popup h2 {margin-bottom: 20px;}
+.popup .close {margin-top: auto;}
+.popup .close button {
+    margin-top: 50px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: #fff;
+    cursor: pointer;
+}
